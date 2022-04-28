@@ -3,21 +3,27 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import MyNav from "./components/MyNav"
 import TVShows from "./components/TVShows"
-import LordRings from "./components/LordRings"
-import HarryPorter from "./components/HarryPorter"
-import StarWars from "./components/StarWars"
+
 import MyFooter from "./components/MyFooter"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import NotFound from "./components/NotFound"
+import MovieDetails from "./components/MovieDetails"
+import AllMovies from "./components/AllMovies"
 
 function App() {
   return (
-    <div className="netflix-container container-fluid px-5">
-      <MyNav />
-      <TVShows />
-      <LordRings />
-      <HarryPorter />
-      <StarWars />
-      <MyFooter />
-    </div>
+    <BrowserRouter>
+      <div className="netflix-container container-fluid px-5">
+        <MyNav />
+        <Routes>
+          <Route path="/" element={<TVShows />} />
+          <Route path="/movies" element={<AllMovies />} />
+          <Route path="/details/:movieId" element={<MovieDetails />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <MyFooter />
+      </div>
+    </BrowserRouter>
   )
 }
 

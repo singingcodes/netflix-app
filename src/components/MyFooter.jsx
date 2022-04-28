@@ -3,7 +3,7 @@ import { Row } from "react-bootstrap"
 const MyFooter = () => {
   return (
     <div>
-      <footer>
+      <footer className="page-footer">
         <Row className="justify-content-center mt-5">
           <div className="col-10 col-lg-6 text-muted text-center text-sm-left">
             <i className="bi bi-facebook"></i>

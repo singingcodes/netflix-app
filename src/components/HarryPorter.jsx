@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react"
-import { Carousel, Row, Col, Spinner, Alert } from "react-bootstrap"
+import { Link } from "react-router-dom"
+import { Carousel, Row, Col, Spinner, Alert, Button } from "react-bootstrap"
 
 const HarryPorter = () => {
   const [movies, setMovies] = useState([])
   const [isError, setIsError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => fetchData(), [])
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   const fetchData = async () => {
     try {
@@ -44,6 +47,11 @@ const HarryPorter = () => {
                   src={movie.Poster}
                   alt="Third slide"
                 />
+                <Carousel.Caption>
+                  <Link to={"/details/" + movie.imdbID}>
+                    <Button variant="dark">View</Button>
+                  </Link>
+                </Carousel.Caption>
               </Col>
             ))}
           </Row>
@@ -57,6 +65,11 @@ const HarryPorter = () => {
                   src={movie.Poster}
                   alt="Third slide"
                 />
+                <Carousel.Caption>
+                  <Link to={"/details/" + movie.imdbID}>
+                    <Button variant="dark">View</Button>
+                  </Link>
+                </Carousel.Caption>
               </Col>
             ))}
           </Row>

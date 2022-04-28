@@ -6,7 +6,9 @@ import {
   FormControl,
   Spinner,
   Alert,
+  Button,
 } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const LordRings = () => {
   const [movies, setMovies] = useState([])
@@ -14,7 +16,9 @@ const LordRings = () => {
   const [searchQuery, setSearchQuery] = useState("")
   const [isError, setIsError] = useState(false)
 
-  useEffect(() => fetchData(), [])
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   const fetchData = async () => {
     try {
@@ -67,6 +71,11 @@ const LordRings = () => {
                     src={movie.Poster}
                     alt="slide"
                   />
+                  <Carousel.Caption>
+                    <Link to={"/details/" + movie.imdbID}>
+                      <Button variant="dark">View</Button>
+                    </Link>
+                  </Carousel.Caption>
                 </Col>
               ))}
           </Row>
@@ -80,6 +89,11 @@ const LordRings = () => {
                   src={movie.Poster}
                   alt="Third slide"
                 />
+                <Carousel.Caption>
+                  <Link to={"/details/" + movie.imdbID}>
+                    <Button variant="dark">View</Button>
+                  </Link>
+                </Carousel.Caption>
               </Col>
             ))}
           </Row>
