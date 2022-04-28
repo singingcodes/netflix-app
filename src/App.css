@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.netflix-container {
+  font-family: "Poppins", sans-serif;
+  background-color: #141414;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 15px !important;
+}
+
+.carousel-control-prev {
+  left: -15px !important;
+}
+
+.carousel-control-next {
+  right: -15px !important;
+}
+.carousel-indicators {
+ display: none !important;
+}
+.navbar {
+  font-size: 0.85rem;
+}
+#dropdown-basic-button{
+  border: 0.1px solid #ADC4C4 !important;
+  background: transparent !important;
+  outline: none !important;
+}
+#responsive-navbar-nav > div.dropdown > button{
+  background-color: transparent !important;
+  border: none !important;
+}
+.navbar-brand img {
+  margin-left: -11px;
+}
+
+.navbar-nav {
+  font-weight: 600;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  font-weight: 700;
+}
+
+.kids-item {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+i.bi {
+  font-size: 1.1rem;
+}
+
+.dropdown i.bi {
+  font-size: 1.2rem;
+}
+
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  color: white;
+}
+
+.bg-darker {
+  background-color: black;
+}
+
+main {
+  position: relative;
+}
+ h1, h5 {
+  color: white;
+  font-weight: 600;
+}
+
+footer i.bi {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+footer ul {
+  margin-top: 1rem;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .header-icons {
+    /* float: right; */
+    position: absolute;
+    right: 0;
+  }
+}
